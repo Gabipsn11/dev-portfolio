@@ -1,4 +1,4 @@
-# Portfólio de Desenvolvedora - Gabriela Pires
+# Portfólio Web Dev
 
 Este é o meu portfólio de desenvolvedora, projetado com uma estética cyberpunk para destacar minhas habilidades, projetos e experiências. O projeto está hospedado no GitHub e permite que os usuários naveguem por diferentes seções para conhecer mais sobre meu trabalho e paixão por programação e cibersegurança.
 
