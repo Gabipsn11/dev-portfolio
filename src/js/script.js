@@ -75,7 +75,7 @@ const tabContents = {
         <div class="certificates">
             <ul>
                 <li>Javascript and Typescript course from basic to advanced JS/TS - Udemy (2024)</li>
-                <li>Udemy Brasil company logo Git and GitHub from basic to advanced (with gist and GitHub Pages) - Udemy (2024)</li>
+                <li>Git and GitHub from basic to advanced (with gist and GitHub Pages) - Udemy (2024)</li>
                 <li>Outstanding Project Certificate - ProjetAí (2024)</li>
                 <li>Computer Technician, Networks and Programming, High School + Technical Education in Computer Science, Networks and Programming (2021 - 2023)</li>
                 <li>Professional Qualification as a Mid-Level Technical Assistant in Computer Network Operations(2021 - 2023)</li>
