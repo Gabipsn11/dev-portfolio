@@ -16,6 +16,16 @@ body {
     padding: 40px 20px;
     max-width: 1200px;
     width: 100%;
+    opacity: 0;
+    transform: scale(0.9); /* Começa ligeiramente menor */
+    filter: blur(5px); /* Efeito de desfoque inicial */
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.main-container.loaded {
+    opacity: 1;
+    transform: scale(1); /* Tamanho normal */
+    filter: blur(0); /* Remove o desfoque */
 }
 
 .welcome {
@@ -25,6 +35,16 @@ body {
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8); /* Vem de cima e menor */
+    filter: blur(3px);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease 0.1s;
+}
+
+.welcome.loaded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
 }
 
 .container {
@@ -49,6 +69,16 @@ body {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
     line-height: 1;
+    opacity: 0;
+    transform: translateX(-100px) rotate(-5deg); /* Vem da esquerda com rotação sutil */
+    filter: blur(4px);
+    transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease 0.3s;
+}
+
+.left-section h1.loaded {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+    filter: blur(0);
 }
 
 .right-section h1 {
@@ -61,6 +91,19 @@ body {
     line-height: 1;
     width: 300px;
     text-align: left;
+}
+
+.right-section {
+    opacity: 0;
+    transform: translateX(100px) scale(0.8); /* Vem da direita e menor */
+    filter: blur(4px);
+    transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease 0.5s;
+}
+
+.right-section.loaded {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
 }
 
 .dynamic-text {
@@ -85,6 +128,16 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.5); /* Surge de baixo e bem pequeno */
+    filter: blur(3px);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease 0.7s;
+}
+
+.social-icons.loaded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
 }
 
 .social-icons img {
@@ -309,7 +362,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
     position: relative;
     min-height: 300px;
-    color: #fff; /* Garante que o texto seja visível */
+    color: #fff;
 }
 
 .profile-title {
@@ -331,7 +384,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    opacity: 1; /* Força visibilidade */
+    opacity: 1;
 }
 
 .profile-connect {

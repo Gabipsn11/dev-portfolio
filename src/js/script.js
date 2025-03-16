@@ -56,7 +56,7 @@ const workTimelineContent = `
     <div class="bottom-arrows-placeholder"></div>
 `;
 
-// Conteúdos das abas - Simplificado para o About Me
+// Conteúdos das abas
 const tabContents = {
     "About Me": `
         <div class="cyber-profile">
@@ -81,7 +81,7 @@ const tabContents = {
                 <li>Professional Qualification as a Mid-Level Technical Assistant in Computer Network Operations(2021 - 2023)</li>
                 <li>Computer Network Operations Assistant Technician (2021 - 2023)</li>
                 <li>Computer Support and Maintenance Assistant Technician (2021 - 2023)</li>
-                </ul>
+            </ul>
         </div>
         <div class="bottom-arrows-placeholder"></div>
     `,
@@ -136,10 +136,8 @@ function changeTab(direction) {
             console.error("Elemento #tab-title não encontrado!");
         }
 
-        // Verifica e carrega o conteúdo
         if (tabContents[tabs[currentTab]]) {
             content.innerHTML = tabContents[tabs[currentTab]];
-            console.log("HTML gerado para a aba", tabs[currentTab], ":", content.innerHTML); // Depuração detalhada
         } else {
             console.error("Conteúdo não encontrado para a aba:", tabs[currentTab]);
             content.innerHTML = "<p>Erro ao carregar o conteúdo desta aba.</p>";
@@ -148,10 +146,7 @@ function changeTab(direction) {
         content.classList.remove("fade-out");
         content.classList.add("fade-in");
 
-        // Adiciona as setas inferiores
         addBottomArrows(content);
-
-     
 
         setTimeout(() => content.classList.remove("fade-in"), 500);
     }, 300);
@@ -188,9 +183,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("tab-content");
     if (content) {
         content.innerHTML = tabContents[tabs[currentTab]];
-        console.log("HTML inicial gerado:", content.innerHTML); // Depuração
         addBottomArrows(content);
     } else {
         console.error("Elemento #tab-content não encontrado ao carregar a página!");
     }
+
+    // Adicionando a animação moderna de entrada
+    const mainContainer = document.querySelector('.main-container');
+    const welcome = document.querySelector('.welcome');
+    const leftSectionH1s = document.querySelectorAll('.left-section h1');
+    const socialIcons = document.querySelector('.social-icons');
+    const rightSection = document.querySelector('.right-section');
+
+    setTimeout(() => {
+        mainContainer.classList.add('loaded');
+        welcome.classList.add('loaded');
+        leftSectionH1s.forEach(h1 => h1.classList.add('loaded'));
+        socialIcons.classList.add('loaded');
+        rightSection.classList.add('loaded');
+    }, 50); // Delay reduzido para uma entrada mais rápida e moderna
 });
